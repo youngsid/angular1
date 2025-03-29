@@ -1,0 +1,43 @@
+<form class="mx-auto w-[500px] border border-gray-200 shadow-xl rounded-xl bg-white p-6">
+    <!-- Tiêu đề -->
+    <h2 class="text-2xl font-bold text-white bg-gradient-to-r from-orange-400 to-red-500 p-4 rounded-t-xl text-center">
+        🛒 Xác nhận thanh toán
+    </h2>
+
+    <!-- Họ tên -->
+    <div class="mb-5">
+        <label class="block text-gray-700 font-semibold mb-2">👤 Họ tên:</label>
+        <input [(ngModel)]="donhang.ho_ten" name="ht"
+            class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+            type="text" placeholder="Nhập họ tên của bạn" required />
+    </div>
+
+    <!-- Email -->
+    <div class="mb-5">
+        <label class="block text-gray-700 font-semibold mb-2">📧 Email:</label>
+        <input [(ngModel)]="donhang.email" name="email"
+            class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+            type="email" placeholder="Nhập email của bạn" required />
+    </div>
+
+    <!-- Ghi chú -->
+    <div class="mb-5">
+        <label class="block text-gray-700 font-semibold mb-2">📝 Ghi chú:</label>
+        <textarea [(ngModel)]="donhang.ghi_chu" name="gc"
+            class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 transition h-28"
+            placeholder="Nhập ghi chú (nếu có)"></textarea>
+    </div>
+
+    <!-- Nút Lưu đơn hàng -->
+    <div class="flex justify-center">
+        <button (click)="luudonhang()"
+            class="bg-green-500 hover:bg-green-600 text-white font-bold px-6 py-3 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200">
+            ✅ Xác nhận & Lưu đơn hàng
+        </button>
+    </div>
+
+    <!-- Thông báo lỗi -->
+    <div class="text-red-500 font-bold italic text-center text-lg mt-5">
+        {{ thong_bao }}
+    </div>
+</form>

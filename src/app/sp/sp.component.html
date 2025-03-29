@@ -1,0 +1,16 @@
+<div id="spdetail" class="flex gap-6 p-6 bg-white shadow-lg rounded-lg border border-gray-200">
+    <div class="w-[40%]">
+        <img src="{{sp.hinh}}" class="w-full h-[350px] object-cover rounded-lg shadow-md" alt="{{sp.ten_sp}}" />
+    </div>
+    <div class="w-[60%] p-4">
+        <h3 class="m-2 text-2xl font-bold text-gray-800"> {{sp.ten_sp}} </h3>
+        <p class="py-2 text-gray-600">💲 <span class="line-through">{{sp.gia | number}} VNĐ</span></p>
+        <p class="py-2 text-xl font-semibold text-red-500">🔥 Giá khuyến mãi: {{sp.gia_km | number}} VNĐ</p>
+        <p class="py-2 text-gray-500">Ngày cập nhật: {{ sp.ngay }} </p>
+        <p class="py-2 text-gray-500">Lượt xem: {{ sp.luot_xem }} </p>
+        <p class="py-2 text-gray-500">Tính chất: {{ sp.tinh_chat }} </p>
+        <button type="button" class="text-white bg-green-600 hover:bg-green-700 rounded-lg px-6 py-2 mt-4 text-lg font-semibold shadow-md transition-all duration-200">
+            Thêm vào giỏ hàng
+        </button>
+    </div>
+</div>

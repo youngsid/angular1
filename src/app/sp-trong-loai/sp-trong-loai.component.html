@@ -1,0 +1,14 @@
+<h2 class="bg-gradient-to-r from-green-400 to-teal-500 text-white p-3 my-4 text-2xl font-bold uppercase text-center rounded-lg">
+    📌 Sản phẩm trong loại {{loai.ten_loai}}
+</h2>
+<div class="grid grid-cols-3 gap-6 p-4">
+    <div *ngFor="let sp of sp_arr" class="text-center border border-gray-300 p-4 rounded-lg shadow-md bg-white">
+        <h3 class="m-2 text-lg font-semibold text-gray-800 h-[60px]">
+            <a href="/sp/{{sp.id}}" class="hover:text-blue-500 transition-all duration-200"> {{sp.ten_sp}} </a>
+        </h3>
+        <img src="{{sp.hinh}}" class="w-full h-[200px] object-cover rounded-lg" alt="{{sp.ten_sp}}" />
+        <p class="py-2 text-lg font-semibold text-red-500">Giá: {{sp.gia_km | number}} VNĐ </p>
+        <p class="py-1 text-gray-500"> Cập nhật: {{sp.ngay}} </p>
+        <p class="py-1 text-gray-500"> Lượt xem: {{sp.luot_xem}} </p>
+    </div>
+</div>
